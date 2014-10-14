@@ -9,7 +9,7 @@
 #
 # Commands:
 #   hubot cat me - Observe a cat
-#   hubot pug bomb N - endure N cats
+#   hubot cat bomb N - endure N cats
 #   hubot how many cats are there - the number of cats.
 
 module.exports = (robot) ->
