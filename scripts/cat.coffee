@@ -15,15 +15,15 @@
 module.exports = (robot) ->
 
   robot.respond /cat me/i, (msg) ->    
-    msg.send("http://http://placekitten.com/g/" + (50 + Math.floor(Math.random() * 1000)) + "/" + (50 + Math.floor(Math.random() * 1000)))
+    msg.send("http://placekitten.com/g/" + (50 + Math.floor(Math.random() * 1000)) + "/" + (50 + Math.floor(Math.random() * 1000)))
 
 
   robot.respond /cat bomb( (\d+))?/i, (msg) ->
-    count = msg.match[2] || 6
+    count = msg.match[2] || 5
     i for i in [1..count]
-      msg.send("http://http://placekitten.com/g/" + (50 + Math.floor(Math.random() * 1000)) + "/" + (50 + Math.floor(Math.random() * 1000)))
+      msg.send("http://placekitten.com/g/" + (50 + Math.floor(Math.random() * 1000)) + "/" + (50 + Math.floor(Math.random() * 1000)))
 
   robot.respond /how many cats are there/i, (msg) ->
-    msg.send "There are more cats than pugs."
+    msg.send "No mortal knows how many cats there are. Only the internet gods know such things."
 
 
