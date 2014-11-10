@@ -17,12 +17,12 @@ randomSize = () ->
 
 module.exports = (robot) ->
 
-  robot.respond /cat me/i, (msg) ->    
+  robot.respond /cat me/i, (msg) ->
     msg.send "http://placekitten.com/g/#{randomSize()}/#{randomSize()}"
 
 
   robot.respond /cat bomb( (\d+))?/i, (msg) ->
-    count = msg.match[2] || 5
+    count = msg.match[2] or 5
     msg.send "http://placekitten.com/g/#{randomSize()}/#{randomSize()}" for i in [1..count]
 
   robot.respond /how many cats are there/i, (msg) ->
